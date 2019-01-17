@@ -1,27 +1,77 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta charset="UTF-8">
-	<title></title>
+    <title>GIPHY-API</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 </head>
 
 <body>
-    
-    <div id="buttons">
-        <button data-still="will smith">Will Smith</button>
-        <button data-still="denzel washington">Denzel Washington</button>
-        <button data-still="sanaa lathan">Sanaa Lathan</button>
-        <button data-still="kerry washington">Kerry Washington</button>
-        <button data-still="jamie foxx">Jamie Foxx</button>
-        <button data-still="meagan good">Meagan Good</button>
-        <button data-still="gabrielle union">Gabrielle Union</button>
-        <button data-still="don cheadle">Don Cheadle</button>
-        <button data-still="idris elba">Idris Elba</button>
-        <button data-still="taraji henson">Taraji P. Henson</button>
+
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">My Top Actors & Actresses</h1>
+            <p class="lead">You can also add and submit your own actors and Actresses.</p>
+        </div>
     </div>
 
-    <div id="gifs-appear-here"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
 
+        <div id="buttons">
+            <button data-still="will smith">Will Smith</button>
+            <button data-still="denzel washington">Denzel Washington</button>
+            <button data-still="sanaa lathan">Sanaa Lathan</button>
+            <button data-still="kerry washington">Kerry Washington</button>
+            <button data-still="jamie foxx">Jamie Foxx</button>
+            <button data-still="meagan good">Meagan Good</button>
+            <button data-still="gabrielle union">Gabrielle Union</button>
+            <button data-still="don cheadle">Don Cheadle</button>
+            <button data-still="idris elba">Idris Elba</button>
+            <button data-still="taraji henson">Taraji P. Henson</button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10"></div>
+            <div id="gifs-appear-here"></div>
+        </div>
+
+            <div class="col-lg-2">
+
+                <!-- Input Form -->
+                <form class="actor-input">
+                   <h4>Add you favorite actor/actress:</h4>  
+                <input id="actoractress" type="text" name="actoractress" >
+
+                <br>
+
+                <input id="addPerson" type="submit" value="Submit" >
+                </form>
+
+                
+            </div>
+
+
+        
+
+    </div>
+
+    
+
+
+
+
+
+
+
+    
 
 
      <!-- JQuery -->

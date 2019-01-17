@@ -5,7 +5,9 @@ var actorsArray = ["Will Smith", "Denzel Washington", "Sanaa Lathan", "Kerry Was
 var topics = [];
 
 // Get the gifs to animate, still and play again
-$(document).on("click", ".animal-image", function() {
+$(document).on("click", ".actor-image", function() {
+
+    // .animal-image"
 
     var state = $(this).attr("data-state");
 
@@ -33,7 +35,6 @@ $("button[data-still]").on("click", function() {
     })
 
 // My for loop that appends a button for each string in the array
-
     .then(function(response) {
         var results = response.data;
 
@@ -42,7 +43,6 @@ $("button[data-still]").on("click", function() {
             var gifDiv = $("<div>");
 
             // The ratings for the gifs
-
             var rating = results[i].rating;
             var p = $("<p>").text("Rating: " + rating);
 
@@ -57,7 +57,7 @@ $("button[data-still]").on("click", function() {
             personImage.attr("data-still", still);
             personImage.attr("data-animate", animated);
             personImage.attr("data-state", "still");
-            personImage.addClass("animal-image");
+            personImage.addClass("actor-image");
 
 
             // Get the new gif to populate to the top
@@ -67,12 +67,71 @@ $("button[data-still]").on("click", function() {
             $("#gifs-appear-here").prepend(gifDiv);
 
         }
-
-
-
-
-
     });
+});
 
+
+
+
+// Function for the input and submit
+
+
+$("#buttons").on("click", function(event) {
+
+	event.preventDefault();
+
+	var actorsArray = $("#buttons").val().trim();
+
+	topics.push(buttons);
+
+	renderButtons();
 
 });
+
+$("#addPerson").on("click", function(event) {
+
+	event.preventDefault();
+
+	var addPerson = $("#actoractress").val().trim();
+
+	topics.push(addPerson);
+
+	renderButtons();
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// function addButton(show){
+// 	if(topics.indexOf(show) === -1) {
+// 		topics.push(show);
+// 		$("#buttons").empty();
+//         renderButtons();
+// 	}
+// }
+
+
+// $(document).on("click", ".actor-image", function() {
+
+// 	renderButtons();
+// 	$("#submit").on("click", function(){
+// 		event.preventDefault();
+// 		addButton($("#actoractress").val().trim());
+// 		$("#actoractress").val("");
+// 	});
+// });
+
+
+
+
+
+
