@@ -1,8 +1,33 @@
-form {
+html, body {
+    height: 100%;
+    background-color: #fff5c9;
+    }
+
+.jumbotron {
+    background-color: #3a016b;
+    color: white;
+}
+
+p {
+    color: #fff5c9;
+}
+
+.actor-input {
     float: right;
 }
 
+h4 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
 button {
-    background-color: #C10C79;
-    border-radius: 2px;
+    background-color: #4f0054;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    
 }

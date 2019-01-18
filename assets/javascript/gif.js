@@ -1,7 +1,8 @@
 // My array of actors and actresses
 var actorsArray = ["Will Smith", "Denzel Washington", "Sanaa Lathan", "Kerry Washington", "Jamie Foxx", "Meagan Good", "Gabrielle Union", "Don Cheadle", "Idris Elba", "Taraji P. Henson"];
 
-var topics = [];
+var topics = "";
+
 
 // Get the gifs to animate, still and play again
 $(document).on("click", ".actor-image", function() {
@@ -70,24 +71,36 @@ $("button[data-still]").on("click", function() {
 });
 
 
-
+ 
 
 // Function for the input and submit
+
+$("#addPerson").on("click", function(e) {
+    e.preventDefault();
+    
+    console.log("addPerson")
+
+    var button = $("<button>").text($("#actoractress").val());
+    $("#buttons").append(button);  
+
+    actorsArray.push(topics);
+    console.log("actorsArray")
+
+    
+//   console.log($("#actoractress").val())
+
+
+});
+
+
+
+
 
 // $(document).on("click", ".actor-input", function(e) {
 //     e.preventDefault();
     
-//     var button = $("<button>").text($("#actoractress").val())
+//     var button = $("<button>").text($("#actoractress").val());
 //     $("#buttons").append(button);  
-    
-    
-// //   console.log($("#actoractress").val())
-
-// });
-
-
-
-
 
 
 
