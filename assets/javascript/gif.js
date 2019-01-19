@@ -20,7 +20,7 @@ var topics = "";
 
 
 // When you click on a gif button the giphys show up
-$("button[data-still]").on("click", function() {
+$(document).on("click", ".actorButton", function() {
     var person = $(this).attr("data-still");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     person + "&api_key=svAHRzuiCCv7R8Ek8WHJIt8nphDzAa1R";
@@ -76,7 +76,7 @@ $("button[data-still]").on("click", function() {
         
         console.log("addPerson")
 
-        var button = $("<button>").text($("#actoractress").val());
+        var button = $("<button>").addClass("actorButton").attr("data-still", $("#actoractress").val()).text($("#actoractress").val());
         $("#buttons").append(button);  
 
         actorsArray.push(addPerson);
