@@ -2,24 +2,21 @@
 var actorsArray = ["Will Smith", "Denzel Washington", "Sanaa Lathan", "Kerry Washington", "Jamie Foxx", "Meagan Good", "Gabrielle Union", "Don Cheadle", "Idris Elba", "Taraji P. Henson"];
 
 var topics = "";
-
-
+    
 // Get the gifs to animate, still and play again
-$(document).on("click", ".actor-image", function() {
+    $(document).on("click", ".actor-image", function() {
 
-   
+        var state = $(this).attr("data-state");
 
-    var state = $(this).attr("data-state");
-
-    if (state === "still") {
-      $(this).attr("src", $(this).attr("data-animate"));
-      $(this).attr("data-state", "animate");
-    }
-    else {
-      $(this).attr("src", $(this).attr("data-still"));
-      $(this).attr("data-state", "still");
-    }
-  });
+        if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+        }
+        else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+        }
+    });
 
 
 // When you click on a gif button the giphys show up
@@ -27,7 +24,6 @@ $("button[data-still]").on("click", function() {
     var person = $(this).attr("data-still");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     person + "&api_key=svAHRzuiCCv7R8Ek8WHJIt8nphDzAa1R";
-
 
     $.ajax({
         url: queryURL,
@@ -71,40 +67,23 @@ $("button[data-still]").on("click", function() {
 });
 
 
- 
-
 // Function for the input and submit
 
-$("#addPerson").on("click", function(e) {
-    e.preventDefault();
+    $("#addPerson").on("click", function(e) {
+        var addPerson = $("#actoractress").val()
+        e.preventDefault();
+        
+        
+        console.log("addPerson")
+
+        var button = $("<button>").text($("#actoractress").val());
+        $("#buttons").append(button);  
+
+        actorsArray.push(addPerson);
+        console.log("actorsArray")
+    });
+
+
+
     
-    console.log("addPerson")
-
-    var button = $("<button>").text($("#actoractress").val());
-    $("#buttons").append(button);  
-
-    actorsArray.push(topics);
-    console.log("actorsArray")
-
     
-//   console.log($("#actoractress").val())
-
-
-});
-
-
-
-
-
-// $(document).on("click", ".actor-input", function(e) {
-//     e.preventDefault();
-    
-//     var button = $("<button>").text($("#actoractress").val());
-//     $("#buttons").append(button);  
-
-
-
-
-
-
-
